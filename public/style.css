@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.todo-form input:focus {
+  border-color: #667eea;
+}
+
+.todo-form button {
+  padding: 14px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.todo-form button:hover {
+  background: #5a6fd8;
+}
+
+.todo-form button:active {
+  transform: scale(0.98);
+}
+
+.todos-container {
+  min-height: 200px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 40px 20px;
+}
+
+.todos-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8f9ff;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.todo-content h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.todo-time {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background: #ffe0e0;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .todo-form {
+    flex-direction: column;
+  }
+  
+  .todo-form button {
+    padding: 16px;
+  }
+}

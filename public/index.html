@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Modern Todo App (API)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 My Todo List</h1>
+    </header>
+
+    <form id="todo-form" class="todo-form">
+      <input 
+        type="text" 
+        id="todo-input" 
+        placeholder="What needs to be done?" 
+        required 
+        autocomplete="off"
+      />
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <div id="todos-container" class="todos-container">
+      <!-- Todos will be rendered here by JS -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
